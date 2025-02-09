@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016", // Define a versão do JavaScript para ES2016
+    "module": "commonjs", // Usa módulos CommonJS (padrão do Node.js)
+    "esModuleInterop": true, // Permite importar módulos CommonJS como ES Modules
+    "allowSyntheticDefaultImports": true, // Permite importações sintéticas de default
+    "types": ["node"], // Inclui os tipos do Node.js
+
+    /* Modules */
+    "resolveJsonModule": true, // Permite importar arquivos JSON
+
+    /* Type Checking */
+    "strict": true, // Habilita todas as verificações de tipo estritas
+    "forceConsistentCasingInFileNames": true, // Garante consistência no casing dos arquivos
+
+    /* Emit */
+    "outDir": "./dist", // Diretório de saída para os arquivos compilados
+    "rootDir": "./src", // Diretório raiz do código TypeScript
+
+    /* Interop Constraints */
+    "skipLibCheck": true // Ignora a verificação de tipos das bibliotecas
+  },
+  "include": ["src/**/*"], // Inclui todos os arquivos na pasta src
+  "exclude": ["node_modules"] // Exclui a pasta node_modules
+}
