@@ -1,4 +1,4 @@
-// perfil.ts
+
 import { Publicacao } from './03_publicacao';
 import { AmizadeJaExistenteError, PerfilInativoError, PerfilNaoAutorizadoError } from './01_errors';
 

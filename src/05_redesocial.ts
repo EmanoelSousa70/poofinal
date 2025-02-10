@@ -1,4 +1,4 @@
-// redesocial.ts
+
 import * as fs from 'fs';
 import { Perfil } from './02_perfil';
 import { Publicacao, PublicacaoAvancada } from './03_publicacao';
@@ -113,14 +113,14 @@ export class RedeSocial {
         if (fs.existsSync('dados.json')) {
             const dados = JSON.parse(fs.readFileSync('dados.json', 'utf-8'));
     
-            // Reconstruir perfis
+           
             this.perfis = dados.perfis.map((p: any) => {
                 const perfil = new Perfil(p.id, p.apelido, p.foto, p.email);
                 perfil.status = p.status;
                 return perfil;
             });
     
-            // Reconstruir publicações
+           
             this.publicacoes = dados.publicacoes.map((pub: any) => {
                 const perfil = this.perfis.find(p => p.id === pub.perfilId)!;
                 const publicacao = new Publicacao(pub.id, pub.conteudo, perfil);
@@ -128,7 +128,7 @@ export class RedeSocial {
                 return publicacao;
             });
     
-            // Reconstruir solicitações de amizade
+            
             if (Array.isArray(dados.solicitacoesAmizade)) {
                 this.solicitacoesAmizade = new Map(
                     dados.solicitacoesAmizade.map(([remetenteId, destinatarioId]: [string, string]) => {

@@ -103,7 +103,7 @@ function adicionarPerfil(): void {
                             redeSocial.adicionarPerfil(perfil);
                             console.log("Perfil adicionado com sucesso!");
 
-                            // Salvar os dados após adicionar o perfil
+                            
                             salvarDados();
                         } catch (error: unknown) {
                             if (error instanceof Error) {
@@ -196,7 +196,7 @@ function adicionarPublicacao(): void {
                             redeSocial.adicionarPublicacao(publicacao);
                             console.log("Publicação adicionada com sucesso!");
 
-                            // Salvar os dados após adicionar a publicação
+                            
                             salvarDados();
                         } catch (error: unknown) {
                             if (error instanceof Error) {

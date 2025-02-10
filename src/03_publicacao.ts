@@ -1,4 +1,4 @@
-// publicacao.ts
+
 import { Perfil } from './02_perfil';
 import { Interacao } from './04_interacao';
 import { InteracaoDuplicadaError } from './01_errors';
@@ -20,8 +20,8 @@ export class Publicacao {
         return {
             id: this.id,
             conteudo: this.conteudo,
-            dataHora: this.dataHora.toISOString(), //  Date para string
-            perfilId: this.perfil.id // Armazena  o ID do perfil
+            dataHora: this.dataHora.toISOString(), 
+            perfilId: this.perfil.id 
         };
     }
 }

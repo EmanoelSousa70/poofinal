@@ -1,7 +1,7 @@
-// interacao.ts
+
 import { Perfil } from './02_perfil';
 
-export enum TipoInteracao {
+export enum TipoInteracao { 
     CURTIR = "👍",
     NAO_CURTIR = "👎",
     RISO = "😂",
@@ -23,7 +23,7 @@ export class Interacao {
         return {
             id: this.id,
             tipo: this.tipo,
-            perfilId: this.perfil.id // Armazena apenas o ID do perfil
+            perfilId: this.perfil.id 
         };
     }
 }
